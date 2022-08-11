@@ -16,6 +16,10 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    git config user.email jho107@post.uit.no
+    git config user.name Jon-Fredrik Hopland
     npm install
-    npm run build
+    npm build
+    npm run deploy -- -r 
+    https://$(github_pat)@github.com/joffenhopland/simple_app_nodejs_azure_pipelines_test_publish.git
   displayName: 'npm install and build'
