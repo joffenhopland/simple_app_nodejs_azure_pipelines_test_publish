@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "build": "echo 'build script executed'" 
+    "build": "echo 'build script executed'" ,
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build"
 
   },
   "dependencies": {
